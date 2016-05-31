@@ -12,7 +12,19 @@ class TestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.grayColor()
-        test()
+        
+    }
+    
+    func levelValue(){
+        var level: Int?
+        let startLevel = 1
+        let currentLevel = level ?? startLevel
+        
+        let test = 23
+        let test1 = false
+        let test2 = Bool(test) || test1
+        print(test2)         
+        
     }
     
     func test(){
@@ -32,6 +44,11 @@ class TestViewController: UIViewController {
          (a,b) = (b,a)
     }
     
+    func logIfTrue(@autoclosure predicate:() -> Bool){
+        if predicate() {
+            print("True")
+        }
+    }
     
 }
 
